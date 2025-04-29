@@ -79,10 +79,10 @@ class GetStorage {
     return _concrete.subject.addListener(value);
   }
 
-  final Map<Function, Function> _keyListeners = <Function, Function>{};
+  final Map<Function, Function> _keyListeners = {};
 
   VoidCallback listenKey(String key, ValueSetter callback) {
-    listen() {
+    void listen() {
       if (changes.keys.first == key) {
         callback(changes[key]);
       }
@@ -154,9 +154,9 @@ class GetStorage {
     return;
   }
 
-  late StorageImpl _concrete;
+  late final StorageImpl _concrete;
 
-  GetQueue queue = GetQueue();
+  final queue = GetQueue();
 
   /// listenable of container
   ValueStorage<Map<String, dynamic>> get listenable => _concrete.subject;

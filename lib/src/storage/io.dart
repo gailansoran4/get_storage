@@ -33,7 +33,7 @@ class StorageImpl {
   Future<void> flush() async {
     final buffer = utf8.encode(json.encode(subject.value));
     final length = buffer.length;
-    RandomAccessFile file = await _getRandomFile();
+    final file = await _getRandomFile();
 
     _randomAccessfile = await file.lock();
     _randomAccessfile = await _randomAccessfile!.setPosition(0);
@@ -64,7 +64,7 @@ class StorageImpl {
   Future<void> init([Map<String, dynamic>? initialData]) async {
     subject.value = initialData ?? <String, dynamic>{};
 
-    RandomAccessFile file = await _getRandomFile();
+    final file = await _getRandomFile();
     return file.lengthSync() == 0 ? flush() : _readFile();
   }
 
