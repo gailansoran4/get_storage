@@ -58,19 +58,17 @@ class StorageImpl {
     subject
       ..value.remove(key)
       ..changeValue(key, null);
-    //  return _writeToStorage(subject.value);
+    // return _writeToStorage(subject.value);
   }
 
   void write(String key, dynamic value) {
     subject
       ..value[key] = value
       ..changeValue(key, value);
-    //return _writeToStorage(subject.value);
+    // return _writeToStorage(subject.value);
   }
 
-  // void writeInMemory(String key, dynamic value) {
-
-  // }
+  // void writeInMemory(String key, dynamic value) {}
 
   Future<void> _writeToStorage(Map<String, dynamic> data) async {
     localStorage.setItem(fileName, json.encode(data));
