@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^5.0.0-release-candidate-9.3.2
+  get: ">=5.0.0-release-candidate-9.3.2 <6.0.0"
   path_provider: ^2.0.1
   web: ^1.1.1
 

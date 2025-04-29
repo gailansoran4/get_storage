@@ -32,8 +32,8 @@ dependencies:
     sdk: flutter
   get_storage:
     path: ../
-  path_provider: 
-  get:
+  path_provider: ^2.0.1
+  get: ">=5.0.0-release-candidate-9.3.2 <6.0.0"
 
 dev_dependencies:
   flutter_test:
