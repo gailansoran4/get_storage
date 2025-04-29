@@ -10,7 +10,7 @@ Can store String, int, double, Map and List
 
 ```yaml
 dependencies:
-  get_storage:
+  get_storage: ^2.1.1
 ```
 
 ### Install it
